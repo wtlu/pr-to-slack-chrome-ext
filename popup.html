@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>PR to Slack</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+
+      #submit {
+        border: 1px solid black;
+        width: 100px;
+        cursor: pointer;
+        text-align: center;
+        font-family: sans-serif;
+      }
+    </style>
+
+
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="status"></div>
+    <form>
+      <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+      </div>
+      <div>
+          <label for="task">Task:</label>
+          <input type="text" id="task" />
+      </div>
+      <div>
+          <label for="reviewTime">Est. Review Time (min):</label>
+          <input type="text" id="reviewTime" />
+      </div>
+      <div>
+          <label for="reviewers">Reviewers:</label>
+          <input type="text" id="reviewers" />
+      </div>
+      <div>
+          <label for="link">Link:</label>
+          <input type="text" id="link" />
+      </div>
+      <div>
+          <label for="msg">Additional Message:</label>
+          <textarea id="msg"></textarea>
+      </div>
+
+      <div id="submit">Create PR Message</div>
+
+    </form>
+    <img id="image-result" hidden>
+  </body>
+</html>

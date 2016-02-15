@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "PR to Slack Integration",
+  "description": "This extension will send the current webpage to slack for PR purposes",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
